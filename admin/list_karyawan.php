@@ -8,6 +8,7 @@
   
 ?>
 <!-- section data list karyawan -->
+<link rel="stylesheet" href="../style/style.css">
 <h3 class="text-uppercase">list Data karyawan</h3>
   <main >
     <div class="row">
@@ -32,10 +33,10 @@
 
 <br>
   <main class="shadow bg-light">
-    <table class=" list table ">
+    <table class=" list table " style="overflow-x:auto ;">
       <tr>
         <td>No</td>
-        <td>Nama</td>
+        <td width="100px">Nama</td>
         <td>Tanggal lahir</td>
         <td>Alamat</td>
         <td>Email</td>
@@ -64,9 +65,9 @@
       <td><?php echo $d['shift']; ?></td>
       <td>
         <a href="index.php?id=<?php echo $d['id']?>&page=update-karyawan"><button type="button" class="btn btn-warning" data-toggle="update" data-placement="right" title="update data"><i class='bx bx-edit'></i></button></a>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="Delete" data-placement="right" title="delete data">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $d['id']?>" data-toggle="Delete" data-placement="right" title="delete data">
         <i class='bx bx-trash'></i></button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $d['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body text-center">
@@ -74,7 +75,7 @@
               <h1 class="modal-title fs-3 py-3" id="exampleModalLabel">Yakin Hapus Data Ini?</h1>
               </div>
               <div class="modal-footer">
-              <a href="delete_karyawan.php?id=<?php echo $d['id']?>"><button type="button" class="btn btn-outline-danger">Oke</button></a>
+              <a href="index.php?id=<?php echo $d['id']?>&page=delete-karyawan"><button type="button" class="btn btn-outline-danger">Oke</button></a>
                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancel</button>
               </div>
             </div>

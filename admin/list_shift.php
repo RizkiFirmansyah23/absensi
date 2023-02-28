@@ -32,8 +32,8 @@
       <table class=" list table table-hover">
         <tr>
           <td width="250px">No</td>
-          <td width="320px">Nama Shift</td>
-          <td width="310px">Tanggal</td>
+          <td width="350px">Nama Shift</td>
+          <td width="330px">Tanggal</td>
           <td>Aksi</td>
       </tr>
            
@@ -55,9 +55,9 @@
         <td><?php echo $row['date']; ?></td>
         <td>
         <a href="index.php?id=<?php echo $row['id']?>&page=update-shift"><button type="button" class="btn btn-warning" data-toggle="update" data-placement="right" title="update data"><i class='bx bx-edit'></i></button></a>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="Delete" data-placement="right" title="delete data">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id']?>" data-toggle="Delete" data-placement="right" title="delete data">
         <i class='bx bx-trash'></i></button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $row['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body text-center">
@@ -65,7 +65,7 @@
               <h1 class="modal-title fs-3 py-3" id="exampleModalLabel">Yakin Hapus Data Ini?</h1>
               </div>
               <div class="modal-footer">
-              <a href="delete_shift.php?id=<?php echo $row['id']?>"><button type="button" class="btn btn-outline-danger">Oke</button></a>
+              <a href="index.php?id=<?php echo $row['id']?>&page=delete-shift"><button type="button" class="btn btn-outline-danger">Oke</button></a>
                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancel</button>
               </div>
             </div>

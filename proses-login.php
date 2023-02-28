@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
         elseif($row['Role'] == "petugas"){
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "petugas";
-            header("location:admin/index.php"); 
+            header("location:petugas/index.php"); 
         } 
   }
 } else {

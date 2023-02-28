@@ -27,8 +27,8 @@
       </form>
       <div class="back mx-5">
           <a href="index.php?page=data-shift" >
-            <button type="submit" name="add" class="btn btn-outline-danger" data-toggle="batal" data-placement="right" title="batal">
-              <i class='bx bx-arrow-back icon-back '></i> Batal</button></a>
+            <button type="submit" name="add" class="btn btn-danger" data-toggle="kembali" data-placement="right" title="kembali">
+            <i class='bx bx-undo icon-back '></i></button></a>
           </div>
       </div>
     </div>

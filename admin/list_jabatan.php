@@ -33,8 +33,8 @@
       <table class=" list table table-hover ">
         <tr>
           <td width="250px">No</td>
-          <td width="320px">Nama Jabatan</td>
-          <td width="310px">Tanggal</td>
+          <td width="350px">Nama Jabatan</td>
+          <td width="330px">Tanggal</td>
           <td>Aksi</td>
       </tr>
            
@@ -57,9 +57,9 @@
         <td><?php echo $row['date']; ?></td>
         <td>
         <a href="index.php?id=<?php echo $row['id']?>&page=update-jabatan"><button type="button" class="btn btn-warning" data-toggle="update" data-placement="right" title="update data"><i class='bx bx-edit'></i></button></a>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="Delete" data-placement="right" title="delete data">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $row['id']?>" data-toggle="Delete" data-placement="right" title="delete data">
         <i class='bx bx-trash'></i></button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?php echo $row['id']?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-body text-center">

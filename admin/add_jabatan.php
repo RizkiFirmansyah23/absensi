@@ -35,9 +35,9 @@
         <button type="submit" name="create" class="btn btn-primary" data-toggle="tambah" data-placement="right" title="tambah">Tambah</button>
   </form>
       <div class="back mx-5">
-        <a href="index.php?page=data-jabatan" data-toggle="tambah" data-placement="right" title="tambah">
-          <button type="submit" name="add" class="btn btn-outline-danger">
-          <i class='bx bx-arrow-back icon-back '></i> Batal</button></a>
+        <a href="index.php?page=data-jabatan" data-toggle="kembali" data-placement="right" title="kembali">
+          <button type="submit" name="add" class="btn btn-danger">
+          <i class='bx bx-undo icon-back '></i></button></a>
       </div>
     </div>
   </div> 
